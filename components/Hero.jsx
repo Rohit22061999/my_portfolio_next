@@ -33,13 +33,35 @@ const Hero = () => {
                         Brief description with insights into myself, my vocational journey, and what I engage in professionally.
                     </p>
                     {/* button */}
-                    <div>
-                        Button
+                    <div className = 'flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
+                        <Link href ='/contact'>
+                        <Button className =  'gap-x-2'>
+                            Contact Me <Send size = {18}/>
+                        </Button>
+                        </Link>
+                         <Button variant='secondary' className= 'gap-x-2'>
+                           Download CV <Download size = {18}/>
+                        </Button>
                     </div>
+                    {/* social */}
+                    <Social
+                        contianerStyles='flex gap-x-6 mx-auto xl:mx-0'
+                        iconStyles='text-foreground text-[22px] hover:text-primary transition-all'
+
+                    />
+
 
                 </div>
                 {/* image */}
-                <div className = 'hidden xl:flex relative'>image</div>
+                <div className = 'hidden xl:flex relative'>
+                    <div className='bg-hero_shape2_light dark:bg_hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'>
+                    </div>
+                    <DevImg 
+                    containerStyles={`bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom`}
+                    imgSrc={'/hero/developer.png'}
+                    
+                    />
+                </div>
             </div>
             {/* icon */}
 
